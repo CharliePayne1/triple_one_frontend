@@ -1,7 +1,7 @@
 import './App.css';
 import Public from './Public'
 import Private from './Private'
-import React, { useState} from "react";
+import React, {useState} from "react";
 
 function App() {
   const [username, setUsername] = useState("")
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>Triple One</h1>
-      
+
         <input 
           type="text"
           value={username}
