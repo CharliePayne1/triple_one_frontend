@@ -4,7 +4,7 @@ export default function NewCaseForm() {
     return (
       <>
         <h5>New Case</h5>
-        <select>
+        {/* <select>
         <option  value="select">- Select Category -</option>
             <option  value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
@@ -23,7 +23,7 @@ export default function NewCaseForm() {
         <input type="text" value="Email"placeholder="Email"></input>
         <br></br>
         <br></br>
-        <button>Submit</button>
+        <button>Submit</button> */}
       </>
     );
   }
