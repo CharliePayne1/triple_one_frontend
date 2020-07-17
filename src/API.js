@@ -3,10 +3,10 @@ const logInUrl = `${baseURL}/login`
 const validateURL = `${baseURL}/validate`
 const newCase = `${baseURL}/cases`
 
-const get = (url, token) => {
+const get = (url) => {
     const configurationObject = {
         headers: {
-            "Authorization": token
+            "Authorization": localStorage.token
         }
     }
     return fetch(url, configurationObject)
@@ -29,11 +29,13 @@ const post = (url, body) => {
 const logIn = (body) => post(logInUrl, body)
 .then(res => res.json())
 
-const validate = (token) => get(validateURL, token).then(res => res.json())
+const validate = () => get(validateURL).then(res => res.json())
 
 const submitNewCase = (e, body, submitForm) => 
 {e.preventDefault()
 post(newCase, body)
 submitForm()}
 
-export default { logIn, validate, submitNewCase }
+const getCases = () => get(newCase).then(res => res.json())
+
+export default { logIn, validate, submitNewCase, getCases }

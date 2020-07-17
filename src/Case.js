@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function Case({c}) {
+export default function Case({c, filter}) {
   const [selected, setSelected] = useState(false)
 
   const expand = () => {
@@ -11,12 +11,29 @@ export default function Case({c}) {
     setSelected(false)
   }
 
-  const hospital = () => {
+  const patch = (decision) => {
+    const configObject = {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      "Authorization": localStorage.token
+    },
+    body: JSON.stringify({
+    decision: `${decision}`
+    })
+    };
     
+    return fetch(`http://localhost:3000/cases/${c.id}`, configObject)
+    .then(resp => resp.json()).then(updatedCase => filter(updatedCase.id))
   }
 
-  const stayHome = () => {
+  const hospital = (e) => {
+    patch(e.target.value)
+  }
 
+  const stayHome = (e) => {
+    patch(e.target.value)
   }
 
 
@@ -35,10 +52,10 @@ export default function Case({c}) {
       <button onClick={close}>Close</button>
       <br></br>
       <br></br>
-      <img src={c.image_url}></img>
+      <img src={c.image_url} width= "300px"></img>
       <h5>Symptoms: {c.symptoms}</h5>
-      <button value="go to hospital" onClick={() => hospital()}>Hospital</button>
-      <button value="stay home" onClick={() => stayHome()}>Stay Home</button>
+      <button value="go to hospital" onClick={(e) => hospital(e)}>Hospital</button>
+      <button value="stay home" onClick={(e) => stayHome(e)}>Stay Home</button>
       </> }
       </>
     );
