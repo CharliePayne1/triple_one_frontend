@@ -1,6 +1,7 @@
 const baseURL = "http://localhost:3000"
 const logInUrl = `${baseURL}/login`
 const validateURL = `${baseURL}/validate`
+const newCase = `${baseURL}/cases`
 
 const get = (url, token) => {
     const configurationObject = {
@@ -30,4 +31,9 @@ const logIn = (body) => post(logInUrl, body)
 
 const validate = (token) => get(validateURL, token).then(res => res.json())
 
-export default { logIn, validate }
+const submitNewCase = (e, body, submitForm) => 
+{e.preventDefault()
+post(newCase, body)
+submitForm()}
+
+export default { logIn, validate, submitNewCase }
