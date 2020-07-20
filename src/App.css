@@ -1,3 +1,53 @@
+.App {
+  margin-top: 20px;
+}
+
 .image {
   width: '300px'
+}
+
+*{ margin: 0;
+  width: 100%;
+  overflow-X: none;
+  background-color: #AAF0D1;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+  align-items: center;
+  justify-content: center;
+}
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm {
+  width: 40%;
+  justify-content: right;
+}
+
+.new_case {
+  margin-top: 100px;
+  width: 70%;
+}
+
+.new_case title {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.icon_page {
+  margin-top: 40px;
+  align-content: center;
+  text-align: center;
+}
+
+.doctor_avatar {
+  width: 50px;
 }

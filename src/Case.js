@@ -41,21 +41,21 @@ export default function Case({c, filter}) {
       <>
       {!selected ? 
       <>
-      <h5>Case No. {c.id}</h5>
-      <p>Symptoms: {c.symptoms}</p>
-      <button onClick={expand}>Expand</button>
+        <h4>Case No. {c.id}</h4>
+        <p>Symptoms: {c.symptoms}</p>
+        <button onClick={expand}>Expand</button>
       </>
       : 
       <>
-      <br></br>
-      <br></br>
-      <button onClick={close}>Close</button>
-      <br></br>
-      <br></br>
-      <img src={c.image_url} width= "300px"></img>
-      <h5>Symptoms: {c.symptoms}</h5>
-      <button value="go to hospital" onClick={(e) => hospital(e)}>Hospital</button>
-      <button value="stay home" onClick={(e) => stayHome(e)}>Stay Home</button>
+        <br></br>
+        <br></br>
+        <button onClick={close}>Close</button>
+        <br></br>
+        <br></br>
+        <img src={c.image_url} width= "300px" alt=""></img>
+        <h5>Symptoms: {c.symptoms}</h5>
+        <button value="go to hospital" onClick={(e) => hospital(e)}>Hospital</button>
+        <button value="stay home" onClick={(e) => stayHome(e)}>Stay Home</button>
       </> }
       </>
     );

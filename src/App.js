@@ -32,8 +32,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Triple One</h1>
-          {!username ? < Public handleSubmit={handleSubmit}/> : < Private logout={logout}/>}
+          {!username ? < Public className="public" handleSubmit={handleSubmit}/> : < Private logout={logout}/>}
     </div>
   );
 }
