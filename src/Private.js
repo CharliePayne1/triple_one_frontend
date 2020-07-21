@@ -18,7 +18,7 @@ export default function Private({logout}) {
     return (
       <>
 
-        <button onClick={() => logout()}>Logout</button>
+        <button className="greyButton" onClick={() => logout()}>Logout</button>
         < CaseContainer cases={cases} filter={filter}/>
       </>
     );

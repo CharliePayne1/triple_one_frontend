@@ -9,7 +9,7 @@ export default function CaseContainer({cases, filter}) {
   
     return (
       <>
-        <h5>{cases.length} New cases to review</h5>
+        <h2 className="totalCasesTitle">{cases.length} New cases to review</h2>
         {renderCase()}
       </>
     );

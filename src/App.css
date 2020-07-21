@@ -6,11 +6,13 @@
   width: '300px'
 }
 
-*{ margin: 0;
+* { margin: 0;
   width: 100%;
   overflow-X: none;
   background-color: #AAF0D1;
+  color: black;
   font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box
 }
 
 .title {
@@ -28,7 +30,8 @@
 
 .loginForm {
   width: 40%;
-  justify-content: right;
+  margin-left: 13em;
+  box-shadow: aliceblue;
 }
 
 .new_case {
@@ -42,7 +45,7 @@
   text-align: center;
 }
 
-.icon_page {
+.iconPage {
   margin-top: 40px;
   align-content: center;
   text-align: center;
@@ -50,4 +53,107 @@
 
 .doctor_avatar {
   width: 50px;
+  margin-left: 6em;
+  margin-top: -1em;
+}
+
+.inputField {
+  background-color: aliceblue;
+}
+
+.curvedInputField {
+  background-color: aliceblue;
+  border-radius: 2em;
+}
+
+.button {
+  background-color: rgb(155, 187, 247);
+  border-radius: 2em;
+  width: 100%;
+  position: relative;
+}
+
+.redButton {
+  background-color: firebrick;
+  border-radius: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+  position: relative;
+  padding: 0.5em;
+}
+
+.homeButton {
+  background-color: #AAF0D1;
+  border-radius: 1em;
+  width: 100%;
+  position: relative;
+  padding: 0.5em;
+}
+
+.greyButton {
+  background-color: rgb(155, 187, 247);
+  width: 20%;
+  border-radius: 1em;
+  margin-left: 20em;
+}
+
+.closeButton {
+  border-radius: 1em;
+  width: 15%;
+  margin-left: 15.6em;
+  margin-top: 1em;
+  position: relative;
+  background-color: white;
+  border-style: none;
+}
+
+.newCaseForm {
+  width: 80%;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  margin-left: 2em;
+  border-radius: 10px;
+}
+
+.newCaseTitle {
+  align-self: center;
+  justify-content: center;
+  padding-top: 50px;
+  margin-left: 6.5em;
+}
+
+.smallCase {
+  width: 60%;
+  margin-left: 5em;
+}
+
+.largeCase {
+  width: 70%;
+  margin-left: 3.5em;
+  background-color: white;
+  border-radius: 1em;
+  margin-top: 1em;
+  border-style: solid;
+}
+
+.newCaseButton {
+  background-color: rgb(155, 187, 247);
+  border-radius: 1em;
+  width: 40%;
+  margin-left: 6em;
+}
+
+.totalCasesTitle {
+  flex-direction: column;
+  margin-left: 1em;
+  margin: 30px;
+}
+
+.caseDetails {
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
