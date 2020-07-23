@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000"
+const baseURL = "https://this-is-testing.herokuapp.com/"
 const logInUrl = `${baseURL}/login`
 const validateURL = `${baseURL}/validate`
 const newCase = `${baseURL}/cases`
