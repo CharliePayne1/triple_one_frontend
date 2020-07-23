@@ -24,7 +24,7 @@ export default function Case({c, filter}) {
     })
     };
     
-    return fetch(`http://localhost:3000/cases/${c.id}`, configObject)
+    return fetch(`https://this-is-testing.herokuapp.com/cases/${c.id}`, configObject)
     .then(resp => resp.json()).then(updatedCase => filter(updatedCase.id))
   }
 
