@@ -1,7 +1,7 @@
 const baseURL = "https://this-is-testing.herokuapp.com"
-const logInUrl = `${baseURL}/login`
+const logInURL = `${baseURL}/login`
 const validateURL = `${baseURL}/validate`
-const newCase = `${baseURL}/cases`
+const newCaseURL = `${baseURL}/cases`
 
 const get = (url) => {
     const configurationObject = {
@@ -26,16 +26,17 @@ const post = (url, body) => {
     return fetch(url, configObject)
 }
 
-const logIn = (body) => post(logInUrl, body)
+const logIn = (body) => post(logInURL, body)
 .then(res => res.json())
 
 const validate = () => get(validateURL).then(res => res.json())
 
-const submitNewCase = (e, body, submitForm) => 
-{e.preventDefault()
-post(newCase, body)
-submitForm()}
+const submitNewCase = (e, body, submitForm) => {
+    e.preventDefault()
+    post(newCaseURL, body)
+    submitForm()
+}
 
-const getCases = () => get(newCase).then(res => res.json())
+const getCases = () => get(newCaseURL).then(res => res.json())
 
 export default { logIn, validate, submitNewCase, getCases }
