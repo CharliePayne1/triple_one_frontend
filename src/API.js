@@ -34,7 +34,8 @@ const validate = () => get(validateURL).then(res => res.json())
 const submitNewCase = (e, body, submitForm) => {
     e.preventDefault()
     post(newCaseURL, body)
-    .then(submitForm())
+    .then(r => submitForm(r))
+    .catch(error => console.log(error))
 }
 
 const getCases = () => get(newCaseURL).then(res => res.json())
