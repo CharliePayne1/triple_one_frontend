@@ -26,8 +26,16 @@ export default function NewCaseForm() {
     setLoading(false)
   }
 
-  const submitForm = () => {
-    setFormSubmitted(!formSubmitted)
+  const submitForm = (e) => {
+    e.preventDefault()
+    API.submitNewCase(e, {symptoms, image_url, email})
+    .then(newCase => {
+      if (newCase.error) {
+        alert("There seems to have been an issue submitting your case. Please try re-submitting it or call 111.")
+      } else {
+        setFormSubmitted(true)
+      }
+    })
   }
 
   if (formSubmitted) {return (<h1>Form Submitted </h1>)}
@@ -41,7 +49,7 @@ export default function NewCaseForm() {
       </div> : 
       <div className="newCaseForm">
         <h5 className="newCaseTitle">Add a New Case</h5>
-          <form onSubmit={(e) => API.submitNewCase(e, {symptoms, image_url, email}, submitForm)}>
+          <form onSubmit={submitForm}>
             <br></br>
             <textarea
               className="inputField"

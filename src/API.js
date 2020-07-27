@@ -32,9 +32,8 @@ const logIn = (body) => post(logInURL, body)
 const validate = () => get(validateURL).then(res => res.json())
 
 const submitNewCase = (e, body, submitForm) => {
-    e.preventDefault()
-    post(newCaseURL, body)
-    .then(r => submitForm(r))
+    return post(newCaseURL, body)
+    .then(r => r.json())
     .catch(error => console.log(error))
 }
 
