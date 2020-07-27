@@ -49,12 +49,13 @@ export default function NewCaseForm() {
       </div> : 
       <div className="newCaseForm">
         <h5 className="newCaseTitle">Add a New Case</h5>
+        <span> * Required fields </span>
           <form onSubmit={submitForm}>
             <br></br>
             <textarea
               className="inputField"
               type="text" name="Symptoms"
-              placeholder="Symptoms"
+              placeholder="Symptoms*"
               onChange={(e) => setSymptoms(e.target.value)}/>
             <br></br>
             <br></br>
@@ -68,7 +69,7 @@ export default function NewCaseForm() {
             <input
               className="inputField"
               type="text" name="Email"
-              placeholder="Email"
+              placeholder="Email*"
               onChange={(e) => setEmail(e.target.value)}/>
             <br></br>
             <br></br>
