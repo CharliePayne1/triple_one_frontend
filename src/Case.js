@@ -36,6 +36,10 @@ export default function Case({c, filter}) {
     patch(e.target.value)
   }
 
+  const appointment = (e) => {
+    patch(e.target.value)
+  }
+
 
     return (
       <>
@@ -54,6 +58,7 @@ export default function Case({c, filter}) {
         <img src={c.image_url} width= "300px" alt=""></img>
         <h5 className="caseDetails">Symptoms: {c.symptoms}</h5>
         <button className="redButton" value="go to hospital" onClick={(e) => hospital(e)}>Go To Hospital</button>
+        <button className="blueButton" value="book an appointment" onClick={(e) => appointment(e)}>Book an Appointment</button>
         <button className="homeButton" value="stay home" onClick={(e) => stayHome(e)}>Stay Home</button>
       </div> }
       </>
