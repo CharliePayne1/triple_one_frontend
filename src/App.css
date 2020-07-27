@@ -167,3 +167,9 @@
   align-items: center;
   text-align: center;
 }
+
+.requiredFields {
+  font-style: italic;
+  font-size: 50%;
+  color: black;
+}

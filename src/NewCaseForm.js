@@ -49,7 +49,8 @@ export default function NewCaseForm() {
       </div> : 
       <div className="newCaseForm">
         <h5 className="newCaseTitle">Add a New Case</h5>
-        <span> * Required fields </span>
+        <br></br>
+        <span className="requiredFields"> * Required fields </span>
           <form onSubmit={submitForm}>
             <br></br>
             <textarea
