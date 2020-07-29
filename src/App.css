@@ -83,6 +83,8 @@
   width: 100%;
   position: relative;
   padding: 0.5em;
+  color: white;
+  font-weight: bold;
 }
 
 .blueButton {
@@ -93,6 +95,8 @@
   width: 100%;
   position: relative;
   padding: 0.5em;
+  color: white;
+  font-weight: bold;
 }
 
 .homeButton {
@@ -101,6 +105,8 @@
   width: 100%;
   position: relative;
   padding: 0.5em;
+  color: white;
+  font-weight: bold;
 }
 
 .greyButton {
@@ -108,6 +114,8 @@
   width: 20%;
   border-radius: 1em;
   margin-left: 20em;
+  color: white;
+  font-weight: bold;
 }
 
 .closeButton {
@@ -118,6 +126,7 @@
   position: relative;
   background-color: white;
   border-style: none;
+  font-weight: bold;
 }
 
 .newCaseForm {
