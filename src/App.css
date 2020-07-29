@@ -147,6 +147,7 @@
 .smallCase {
   width: 60%;
   margin-left: 5em;
+  margin-top: 2vh;
 }
 
 .largeCase {
@@ -189,4 +190,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 2vh;
 }
