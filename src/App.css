@@ -11,7 +11,7 @@
   overflow-X: none;
   background-color: #AAF0D1;
   color: black;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
   box-sizing: border-box
 }
 
@@ -37,9 +37,8 @@
 .new_case {
   margin-top: 100px;
   width: 70%;
-}
-
-.new_case title {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -59,6 +58,7 @@
 
 .inputField {
   background-color: aliceblue;
+  border-radius: 1vh;
 }
 
 .curvedInputField {
@@ -71,6 +71,8 @@
   border-radius: 2em;
   width: 100%;
   position: relative;
+  color: white;
+  font-weight: bold;
 }
 
 .redButton {

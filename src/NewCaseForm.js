@@ -43,9 +43,9 @@ export default function NewCaseForm() {
       <>
       {!iconClicked ?
       <div className="iconPage">
-        <h2>TRIPLE ONE</h2>
+        <h2>Triple One</h2>
         <img onClick={setIconClicked} src="https://images.vexels.com/media/users/3/151981/isolated/preview/f8863741dba8034b3e1d4809a01c782a-stethoscope-icon-medical-icons-by-vexels.png" alt=""></img>
-        <h5>Click logo to begin</h5>
+        <h5>Click the logo to begin</h5>
       </div> : 
       <div className="newCaseForm">
         <h5 className="newCaseTitle">Add a New Case</h5>
@@ -54,7 +54,7 @@ export default function NewCaseForm() {
           <form onSubmit={submitForm}>
             <br></br>
             <textarea
-              className="inputField"
+              className="inputField symptoms"
               type="text" name="Symptoms"
               placeholder="Symptoms*"
               onChange={(e) => setSymptoms(e.target.value)}/>
