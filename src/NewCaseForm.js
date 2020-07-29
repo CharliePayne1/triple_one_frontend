@@ -38,7 +38,7 @@ export default function NewCaseForm() {
     })
   }
 
-  if (formSubmitted) {return (<h1>Form Submitted </h1>)}
+  if (formSubmitted) {return (<h2 className="formSubmitted">Form Submitted</h2>)}
     return (
       <>
       {!iconClicked ?

@@ -183,3 +183,10 @@
   font-size: 50%;
   color: black;
 }
+
+.formSubmitted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
