@@ -18,9 +18,13 @@ const App = () => {
     e.preventDefault();
 
     API.logIn({username, password})
-    .then(json => { if (json.username) {
+    .then(json => { 
+      if (json.username) {
       setUsername(json.username)
       localStorage.token = json.token}
+      else {
+        alert("Invalid username or password. Please try again.")
+      }
     })
     .catch(error => console.log(error.message));
   }

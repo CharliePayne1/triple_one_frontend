@@ -31,14 +31,20 @@ export default function NewCaseForm() {
     API.submitNewCase(e, {symptoms, image_url, email})
     .then(newCase => {
       if (newCase.error) {
-        alert("There seems to have been an issue submitting your case. Please try re-submitting it or call 111.")
+        alert("There seems to have been an issue submitting your case. Please submit symptoms and a valid email address.")
       } else {
         setFormSubmitted(true)
       }
     })
   }
 
-  if (formSubmitted) {return (<h2 className="formSubmitted">Form Submitted</h2>)}
+  if (formSubmitted) {
+    return (
+      <>
+        <h4 className="formSubmitted">Form Submitted Successfully</h4>
+        <span>You will be notified via email when a doctor has reviewed your case</span>
+      </>
+    )}
     return (
       <>
       {!iconClicked ?
