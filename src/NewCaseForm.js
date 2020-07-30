@@ -42,7 +42,7 @@ export default function NewCaseForm() {
     return (
       <>
         <h4 className="formSubmitted">Form Submitted Successfully</h4>
-        <span>You will be notified via email when a doctor has reviewed your case</span>
+        <h5>You will be notified via email when a doctor has reviewed your case</h5>
       </>
     )}
     return (
