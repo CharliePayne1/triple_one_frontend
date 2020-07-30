@@ -24,6 +24,7 @@ const App = () => {
       localStorage.token = json.token}
       else {
         alert("Invalid username or password. Please try again.")
+        setUsername("")
       }
     })
     .catch(error => console.log(error.message));
