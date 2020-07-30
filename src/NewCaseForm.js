@@ -40,10 +40,10 @@ export default function NewCaseForm() {
 
   if (formSubmitted) {
     return (
-      <>
-        <h4 className="formSubmitted">Form Submitted Successfully</h4>
+      < div className="formSubmitted">
+        <h4>Form Submitted Successfully</h4>
         <h5>You will be notified via email when a doctor has reviewed your case</h5>
-      </>
+      </div>
     )}
     return (
       <>
